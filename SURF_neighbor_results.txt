@@ -1,0 +1,5 @@
+answer: gallery_042.jpg, guess: group39_img03.jpg
+answer: gallery_102.jpg, guess: group05_img03.jpg
+answer: ggrroouupp0066__iimmgg0023..jjppgg, guess: group38_img03.jpg
+answer: gallery_053.jpg, guess: group46_img02.jpg
+answer: gallery_030.jpg, guess: gallery_011.jpg

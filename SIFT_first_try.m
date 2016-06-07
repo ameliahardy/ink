@@ -1,13 +1,13 @@
 % Need to download vlfeat binary first from webpage - didn't want to store
 % all this in git
 
-run('vlfeat-0.9.20/toolbox/vl_setup'); %for one-time setup (run everytime)
+run('../../../../Downloads/vlfeat-0.9.20/toolbox/vl_setup'); %for one-time setup (run everytime)
 
-heart_image = imread('ink/google_img_tattoos/hearts/plain_heart.jpg');
+heart_image = imread('google_img_tattoos/hearts/plain_heart.jpg');
 
 heart_image = single(rgb2gray(heart_image)); %vl_sift needs grayscale
 
-bird_image = imread('ink/google_img_tattoos/birds/Bird-Tattoo-idea.jpg');
+bird_image = imread('google_img_tattoos/birds/7.jpg');
 
 bird_image = single(rgb2gray(bird_image));
 
@@ -19,11 +19,11 @@ bird_image = single(rgb2gray(bird_image));
 % Here, SIFT is looking at pure L2 distance between two descriptors, so
 % this is probably not the best method for us. However, can use this same
 % process with other vlfeatures.
-heart_images = dir('ink/google_img_tattoos/hearts/*.jpg');
+heart_images = dir('google_img_tattoos/hearts/*.jpg');
 total = 0;
 correct = 0;
 for img = heart_images'
-    fileName = fullfile('ink/google_img_tattoos/hearts/', img.name);
+    fileName = fullfile('google_img_tattoos/hearts/', img.name);
     img = imread(fileName);
     img = single(rgb2gray(img));
     [f, d] = vl_sift(img);
@@ -40,11 +40,11 @@ end
 %Print hearts correctness
 fraction_correct
 
-bird_images = dir('ink/google_img_tattoos/birds/*.jpg');
+bird_images = dir('google_img_tattoos/birds/*.jpg');
 total = 0;
 correct = 0;
 for img = bird_images'
-    fileName = fullfile('ink/google_img_tattoos/birds/', img.name);
+    fileName = fullfile('google_img_tattoos/birds/', img.name);
     img = imread(fileName);
     img = single(rgb2gray(img));
     [f, d] = vl_sift(img);
